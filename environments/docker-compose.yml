@@ -6,7 +6,7 @@ services:
       mode: replicated
       replicas: 3
     ports: 
-      - "8080-8083:3000-3003"
+      - "8080-8086:3000"
   port-tutorial:
     image: "chuckwired/port-tutorial"
     
