@@ -5,7 +5,8 @@ My Bankifi Tech test solution
 
 ## Usage
 
-1. `sh install-docker.sh`
-2. log out
-3. log back in
+1. `sh get_installDocker.sh` at docker host Env
+2. Check if Docker is install with '$ docker version'
+3. Check if docker-compose is installed '$ docker-compose --version'
+
 
