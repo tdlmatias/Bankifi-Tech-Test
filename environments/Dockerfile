@@ -1,13 +1,18 @@
 FROM chuckwired/port-tutorial
 
-RUN mkdir
-WORKDIR $WORKINGPATH /home/hello-world/ && cd /$WORKINGPATH
-COPY app.py 
+# Add path to Env variables
+ENV depend /home/hello-world/node_modules/.bin:$PATH
+ENV workdir /home/hello-world/
+
+# set the working directory
+WORKDIR ${workdir}
+
+COPY app.js ${workdir}
 
 # This is update the systen and install express
 RUN sudo apt-get update \
     # Install NPM express
-    && npm install express --save
+    && npm install -g express
 
 EXPOSE 8080
-CMD ["npm", "start"]
+CMD ["/usr/bin/nodejs", "/home/hello-world/app.js"]
