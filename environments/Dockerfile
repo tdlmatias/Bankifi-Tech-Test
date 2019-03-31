@@ -1,16 +1,13 @@
 FROM chuckwired/port-tutorial
 
-# set the working directory 
-RUN mkdir /app
-WORKDIR /app
-
 # Add path to Env variables
-ENV PATH /app/node_modules/.bin:$PATH
+ENV depend /home/hello-world/node_modules/.bin:$PATH
+ENV workdir /home/hello-world/
 
-COPY package.json /app/
-# Copy all your app's source code inside the Docker image
-COPY . /app/
-COPY . .
+# set the working directory
+WORKDIR ${workdir}
+
+COPY app.js ${workdir}
 
 # This is update the systen and install express
 RUN sudo apt-get update \
@@ -18,4 +15,4 @@ RUN sudo apt-get update \
     && npm install -g express
 
 EXPOSE 8080
-CMD ["npm", "app.js"]
+CMD ["/usr/bin/nodejs", "/home/hello-world/app.js"]
