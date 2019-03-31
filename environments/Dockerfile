@@ -18,4 +18,4 @@ RUN sudo apt-get update \
     && npm install -g express
 
 EXPOSE 8080
-CMD ["npm", "start"]
+CMD ["npm", "app.js"]
