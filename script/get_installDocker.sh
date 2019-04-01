@@ -39,3 +39,5 @@ cd /tmp \
     && sudo chmod +x /usr/local/bin/docker-cleanup \
     && printf '\nDocker Compose installed successfully\n\n'
 
+# Intall a new Cronjob to monitor all dockers
+echo "$(echo '* 2 * * * '/script/webservercheck.sh' ; crontab -l)" | crontab -
