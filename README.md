@@ -10,6 +10,16 @@ My Bankifi Tech test solution
 3. Check if docker-compose is installed `$ docker-compose --version`
 4. Navigate into PATH/environment/ dir and run `$ docker-compose up --scale web=3`
 
+`$ docker-compose images`
+WARNING: Some services (web) use the 'deploy' key, which will be ignored. Compose does not support 'deploy' configuration - use `docker stack deploy` to deploy to a swarm.
+         Container                    Repository           Tag       Image Id      Size
+----------------------------------------------------------------------------------------
+`environments_port-tutorial_1   chuckwired/port-tutorial   latest   80634ca1c877   378 MB`
+`environments_web_1             environments_web           latest   5ab99fbd3414   403 MB`
+`environments_web_2             environments_web           latest   5ab99fbd3414   403 MB`
+`environments_web_3             environments_web           latest   5ab99fbd3414   403 MB`
+
+
 *** Which this script a Docker monitor serrvices will run every 2 minutes
 # Intall a new Cronjob to monitor all dockers
 `echo "$(echo '* 2 * * * '/script/webservercheck.sh' ; crontab -l)" | crontab -`
