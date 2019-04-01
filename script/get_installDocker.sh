@@ -41,4 +41,4 @@ cd /tmp \
 sleep 10
 
 # Intall a new Cronjob to monitor all dockers
-echo "$(echo '* 2 * * * '/script/webservercheck.sh' ; crontab -l)" | crontab -
+echo "$(echo '2 2 * * * '/usr/bin/env python2 /Bankifi-Tech-Test/script/webservercheck.py' ; crontab -l)" | crontab -
