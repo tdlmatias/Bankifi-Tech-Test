@@ -1,2 +1,2 @@
-aws_access_key = "< your AWS_ACCESS_KEY >"
-aws_secret_key = "< your AWS_SECRET_KEY >"
+aws_access_key = ENV['AWS_ACCESS_KEY_ID']
+aws_secret_key = ENV['AWS_SECRET_ACCESS_KEY']
