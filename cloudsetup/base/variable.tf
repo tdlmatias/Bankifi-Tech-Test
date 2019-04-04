@@ -1,8 +1,8 @@
-variable "aws_access_key" {
+variable "access_key" {
   description = "The AWS access Key"
 }
 
-variable "aws_secret_key" {
+variable "secret_key" {
   description = "The AWS secret key"
 }
 
@@ -19,8 +19,8 @@ variable "region_list" {
 
 variable "ami" {
   type = "map"
-
   default = {
+    eu-west-1  = "ami-01f5fbceb7a9fa4d0"
     eu-west-1a = "ami-01f5fbceb7a9fa4d0"
     eu-west-1b = "ami-01f5fbceb7a9fa4d0"
   }

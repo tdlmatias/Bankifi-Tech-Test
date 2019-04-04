@@ -1,11 +1,11 @@
 provider "aws" {
-  access_key = "${var.aws_access_key}"
-  secret_key = "${var.aws_secret_key}"
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
   region     = "${var.region}"
 }
 
 resource "aws_instance" "base" {
-  ami           = "ami-01f5fbceb7a9fa4d0"
+  ami           = "${lookup(var.ami, var.region)}"
   instance_type = "t2.micro"
 }
 
