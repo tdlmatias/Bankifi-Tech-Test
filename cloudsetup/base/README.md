@@ -1,7 +1,7 @@
-<p align="center">
-  <img src="http://i0.wp.com/www.blog.labouardy.com/wp-content/uploads/2017/08/swarm_ansible_terraform_aws.png?w=462"/>
-</p>
+# Cloud Confiuration
+## Now we defined all the required templates and playbook, we only need to type 2 commands to bring up the swarm cluster:
 
-How to setup a docker swarm cluster in action is shown below:
+1 - terraform apply
+2- ansible -i hosts playbook.yml
 
-[![asciicast](https://asciinema.org/a/135278.png)](https://asciinema.org/a/135278)
+-- Note: Make sure to update the hosts file with the public ip of each EC2 instance.
