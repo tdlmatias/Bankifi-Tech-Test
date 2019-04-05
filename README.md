@@ -30,7 +30,7 @@ not support 'deploy' configuration - use `docker stack deploy` to deploy to a sw
 ## Directory Structure.
 
 fig. 01.
-  `BankifiTechTest
+    BankifiTechTest
 │   └── Bankifi-Tech-Test
 │       ├── cloudsetup
 │       │   └── base
@@ -53,5 +53,5 @@ fig. 01.
 │       └── script
 │           ├── get_installDocker.sh
 │           ├── provision.sh
-│           └── webservercheck.py`
+│           └── webservercheck.py
 
