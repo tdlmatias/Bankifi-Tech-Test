@@ -26,3 +26,32 @@ not support 'deploy' configuration - use `docker stack deploy` to deploy to a sw
 
 ## Intall a new Cronjob to monitor all dockers
 `echo "$(echo '* 2 * * * '/script/webservercheck.sh' ; crontab -l)" | crontab -`
+
+## Directory Structure.
+
+fig. 01.
+  `BankifiTechTest
+│   └── Bankifi-Tech-Test
+│       ├── cloudsetup
+│       │   └── base
+│       │       ├── get_installDocker.sh
+│       │       ├── hosts
+│       │       ├── outputs.tf
+│       │       ├── playbook.yml
+│       │       ├── provider.tf
+│       │       ├── README.md
+│       │       ├── resources.tf
+│       │       ├── security_groups.tf
+│       │       └── variables.tf
+│       ├── environments
+│       │   ├── app.js
+│       │   ├── docker-compose.yml
+│       │   ├── Dockerfile
+│       │   └── package.json
+│       ├── LICENSE
+│       ├── README.md
+│       └── script
+│           ├── get_installDocker.sh
+│           ├── provision.sh
+│           └── webservercheck.py`
+
