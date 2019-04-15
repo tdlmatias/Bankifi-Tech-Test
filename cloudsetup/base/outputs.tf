@@ -9,3 +9,7 @@ output "WORKER1" {
 output "WORKER2" {
   value = "${aws_instance.worker2.public_ip}"
 }
+
+output "WORKER3" {
+  value =  "${aws_instance.worker3.public_ip}"
+}
