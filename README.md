@@ -1,5 +1,6 @@
 # Bankifi-Tech-Test
 My Bankifi Tech test solution
+==> Contributors are welcome <==
 
 # Docker and Docker Compose install script
 
